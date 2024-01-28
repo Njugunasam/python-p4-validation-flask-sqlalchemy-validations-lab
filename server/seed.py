@@ -17,9 +17,8 @@ with app.app_context():
 
     authors = []
     for n in range(25):
-        author = Author(name=fake.name(), phone_number='1324543333')
+        author = Author(name=fake.first_name(), phone_number='1324543333')
         authors.append(author)
-
     db.session.add_all(authors)
     posts = []
     for n in range(25):
